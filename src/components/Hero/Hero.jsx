@@ -6,7 +6,7 @@ import heroImg from '../../imgs/man.png'
 const Hero = () => {
   return (
     <section className='hero dark:bg-gradient-to-r dark:from-simdarkmain dark:to-darkmain'>
-      <div className="container mx-auto flex items-center justify-center gap-6 md:gap-16 flex-col md:flex-row">
+      <div className="container mx-auto flex items-center justify-center gap-6 lg:gap-16 flex-col lg:flex-row">
         <div className="hero-content">
           <h4 className='dark:text-lite'>Hello, I'm</h4>
           <h1>Mostafa Sakr</h1>

@@ -22,7 +22,14 @@ section.hero {
   font-weight: 700;
   text-align: left;
 }
-
+@media only screen and (max-width: 900px) {
+  .hero-content h1{
+    text-align: center;
+  }
+  .hero-content h4{
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 500px) {
 
   section.hero {
