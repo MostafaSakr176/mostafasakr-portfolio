@@ -1,0 +1,46 @@
+.backdrop{
+  transition: all 0.3s 0.2s;
+}
+.side-nav{
+  height: 100vh;
+  width: 250px;
+  background: rgb(90,55,156);
+  background: linear-gradient(100deg, rgba(90,55,156,1) 0%, rgba(111,66,193,1) 54%, rgba(102,61,177,1) 54%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  transform: translateX(-100%);
+  transition: all 0.3s 0.2s;
+}
+.side-nav.open{
+  transform: translateX(0%);
+}
+.side-nav .logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.side-nav .logo h1{
+  color: #fff;
+  text-align: left;
+}
+.side-nav .toggle-sidemenu span {
+  background: var(--light);
+}
+.side-nav ul li a{
+  color: var(--light);
+  font-size: 22px;
+  padding: 0.5rem;
+  display: block;
+  transform: translateX(-100%);
+  transition: all 0.3s 0.3s;
+}
+.side-nav ul li a:hover{
+  background-color: rgba(2, 6, 23, 0.308);
+  transition: all 0.3s 0s;
+}
+.side-nav.open ul li a{
+  transform: translateX(0%);
+}
