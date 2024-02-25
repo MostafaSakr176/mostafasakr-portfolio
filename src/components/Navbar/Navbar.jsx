@@ -17,7 +17,7 @@ const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
   };
 
   return (
-    <nav>
+    <nav className="dark:bg-simdarkmain dark:shadow-lg">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="logo flex items-center gap-4">
           <div className={`toggle-sidemenu ${toggleSideNav?"open":""} block lg:hidden`} onClick={handleToggleSideMenu}>
@@ -50,8 +50,8 @@ const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
         </ul>
         <div className="switch" data-darkMode={darkMode} onClick={toggleDarkMode}>
               <motion.div className="handle" layout transition={spring} >
-                <FaMoon color="#fff" fontSize={30} className={`${!darkMode?"block":"hidden"}`}/>
-                <BsSunFill color="orange" fontSize={30} className={`${darkMode?"block":"hidden"}`}/>
+                <FaMoon color="#fff" fontSize={26} className={`${!darkMode?"block":"hidden"}`}/>
+                <BsSunFill color="orange" fontSize={26} className={`${darkMode?"block":"hidden"}`}/>
               </motion.div>
             </div>
         </div>
