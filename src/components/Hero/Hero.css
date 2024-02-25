@@ -20,12 +20,14 @@ section.hero {
   font-size: 6rem;
   text-align: left;
   font-weight: 800;
+  animation: electric 3s ease-in infinite ;
 }
 
 .hero-content h4{
   font-size: 46px;
   font-weight: 700;
   text-align: left;
+  /* animation: electric 4s ease-in-out infinite ; */
 }
 @media only screen and (max-width: 900px) {
   .hero-content h1{
@@ -51,4 +53,42 @@ section.hero {
     font-size: 2rem;
   }
 
+}
+
+
+
+@keyframes electric {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  95% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
