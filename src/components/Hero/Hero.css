@@ -9,7 +9,12 @@ section.hero {
   padding-top : 5rem;
   transition: all 0.3s;
 }
-
+.hero-content{
+  background-image: url('../../imgs/paterns/patern\ 4.png');
+  background-repeat: no-repeat;
+  background-position: start;
+  background-size: contain;
+}
 .hero-content h1{
   color: var(--main);
   font-size: 6rem;
