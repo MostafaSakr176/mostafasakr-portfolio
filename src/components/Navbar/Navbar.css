@@ -1,25 +1,24 @@
 nav{
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   position: fixed;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+nav.scrollEffect{
+  padding: 1rem;
+  background-color: var(--main);
   box-shadow: 0px 0px 40px -20px var(--main);
 }
 
-html:not([data-scroll='0']) {
-  nav{
-    background-color: var(--light);
-  }
-}
-
 nav li a{
-  color: #6f42c1;
+  color: var(--light);
   padding: 0.2rem 1.2rem;
   border-radius: 4px;
   font-size: 20px;
   background: linear-gradient(180deg, rgba(255,255,255,0) 1%, rgba(105,90,166,0) 100%);
   display: block;
-  height: 0;
-  line-height: 0;
   animation: slidDown 1s ease-in 1 ;
   transition: all 0.3s;
 }
@@ -27,22 +26,15 @@ nav li a{
 nav li a:hover{
   color: var(--light);
   background-color: var(--main);
-  height: unset;
-  line-height: unset;
-  /* background: rgb(255,255,255); */
-  /* background: linear-gradient(180deg, rgba(255,255,255,0) 1%, rgba(105,90,166,1) 100%); */
 }
 
-.logo h1{
-  font-weight: 700;
-  color: var(--main);
-  margin: 0;
-  font-size: 36px;
+.logo img{
+  width: 130px;
 }
 
 .switch {
   width: 54px;
-  height: 30px;
+  height: 32px;
   background-color: rgba(255, 255, 255, 0.4);
   display: flex;
   justify-content: flex-start;
@@ -67,7 +59,7 @@ nav li a:hover{
 
 .toggle-sidemenu {
   width: 30px;
-  height: 30px;
+  height: 20px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -83,9 +75,9 @@ nav li a:hover{
 .toggle-sidemenu span {
   display: block;
   position: absolute;
-  height: 3px;
+  height: 2px;
   width: 100%;
-  background: var(--main);
+  background: var(--light);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -131,6 +123,19 @@ nav li a:hover{
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
+
+
+
+@media only screen and (max-width: 500px) {
+  nav{
+    padding: 1rem 0.5rem 2rem;
+  }
+  nav.scrollEffect{
+    padding: 1rem 0.5rem;
+  }
+}
+
+
 
 
 

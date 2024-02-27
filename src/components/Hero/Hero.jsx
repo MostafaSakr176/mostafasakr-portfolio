@@ -5,7 +5,7 @@ import heroImg from '../../imgs/man.png'
 
 const Hero = () => {
   return (
-    <section className='hero dark:bg-gradient-to-r dark:from-simdarkmain dark:to-darkmain'>
+    <section className='hero dark:bg-gradient-to-r dark:from-simdarkmain dark:to-darkmain transition-all'>
       <div className="hero-content container mx-auto flex items-center justify-center gap-6 lg:gap-16 flex-col lg:flex-row">
         <div>
           <h3 className='dark:text-lite'>Hello, I'm</h3>

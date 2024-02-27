@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { motion } from "framer-motion";
 import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
+import liteLogo from '../../imgs/logo-lite.png';
+import darkLogo from '../../imgs/logo-dark.png';
 
 
 
 const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
+
+  const [scrollOffsetY, setScrollOffsetY]= useState(0);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
   const handleToggleSideMenu = () => setToggleSideNav(!toggleSideNav)
@@ -17,8 +21,18 @@ const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
     damping: 30
   };
 
+  const handleScrollEffect = () => {
+    const position = window.scrollY;
+    console.log(position);
+    setScrollOffsetY(position)
+  }
+
+  window.addEventListener('scroll', handleScrollEffect);
+
+
+
   return (
-    <nav className="dark:bg-simdarkmain dark:shadow-lg">
+    <nav className={`bg-opacity-0   ${scrollOffsetY > 0 ? "dark:bg-simdarkmain dark:shadow-md dark:shadow-darkmain scrollEffect" : ""}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="logo flex items-center gap-4">
           <div className={`toggle-sidemenu ${toggleSideNav?"open":""} block lg:hidden`} onClick={handleToggleSideMenu}>
@@ -26,7 +40,7 @@ const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
             <span className="dark:bg-lite"></span>
             <span className="dark:bg-lite"></span>
           </div>
-          <h1 className="dark:text-lite">MSakr</h1>
+          <img src={darkLogo} alt="logo" />
         </div>
         <div className="flex items-center content-center gap-3 ">
         <ul className="hidden items-center m-0 gap-2 lg:flex">
