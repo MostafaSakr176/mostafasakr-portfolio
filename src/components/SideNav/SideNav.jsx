@@ -1,5 +1,7 @@
 import React from "react";
 import "./SideNav.css";
+import darkLogo from '../../imgs/logo-dark.png';
+
 
 const Sidenav = ({ toggleSideNav, setToggleSideNav }) => {
   const handleToggleSideMenu = () => setToggleSideNav(!toggleSideNav);
@@ -8,8 +10,8 @@ const Sidenav = ({ toggleSideNav, setToggleSideNav }) => {
     <>
       <div className={`fixed inset-0 backdrop-blur-sm ${toggleSideNav ? "visible opacity-100" : "invisible opacity-0"} backdrop`} onClick={handleToggleSideMenu}/>
       <div className={`side-nav ${toggleSideNav ? "open" : ""}`}>
-        <div className="logo">
-          <h1>M.sakr</h1>
+        <div className="logo mb-8">
+        <img src={darkLogo} alt="logo" />
           <div
             className={`toggle-sidemenu ${toggleSideNav ? "open" : ""}`}
             onClick={handleToggleSideMenu}

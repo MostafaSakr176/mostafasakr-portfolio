@@ -3,7 +3,6 @@ import "./Navbar.css";
 import { motion } from "framer-motion";
 import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
-import liteLogo from '../../imgs/logo-lite.png';
 import darkLogo from '../../imgs/logo-dark.png';
 
 
