@@ -32,7 +32,7 @@ const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
 
 
   return (
-    <nav className={`bg-opacity-0   ${scrollOffsetY > 0 ? "dark:bg-simdarkmain dark:shadow-md dark:shadow-darkmain scrollEffect" : ""}`}>
+    <nav className={`bg-opacity-0   ${scrollOffsetY > 0 ? "dark:bg-darkmain dark:shadow-md dark:shadow-simdarkmain scrollEffect" : ""}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="logo flex items-center gap-4">
           <div className={`toggle-sidemenu ${toggleSideNav?"open":""} block lg:hidden`} onClick={handleToggleSideMenu}>
