@@ -5,6 +5,7 @@ import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 
 
+
 const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
@@ -25,7 +26,7 @@ const Navbar = ({darkMode , setDarkMode , toggleSideNav ,setToggleSideNav}) => {
             <span className="dark:bg-lite"></span>
             <span className="dark:bg-lite"></span>
           </div>
-          <h1 className="dark:text-lite">M.Sakr</h1>
+          <h1 className="dark:text-lite">MSakr</h1>
         </div>
         <div className="flex items-center content-center gap-3 ">
         <ul className="hidden items-center m-0 gap-2 lg:flex">
